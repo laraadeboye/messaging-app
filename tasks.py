@@ -20,7 +20,7 @@ def send_email(to_email):
     from_email = os.getenv("SMTP_EMAIL")
     from_password = os.getenv("SMTP_PASSWORD")
     subject = "Test Email"
-    body = "This is a test email."
+    body = "Hallo there, This is a test email."
 
     msg = MIMEText(body)
     msg['Subject'] = subject
