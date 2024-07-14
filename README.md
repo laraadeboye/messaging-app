@@ -244,12 +244,12 @@ The web session will display: `Email to [Destination Email] queued for sending`.
 - **For message logging**, type the following in your web browser:
 
 ```sh
-https://<ngrok endpoint>/?talktome=1
+https://<ngrok endpoint>/?talktome
 ```
 e.g.
 
 ```sh
-https://19e3-102-89-40-117.ngrok-free.app/?talktome=1
+https://19e3-102-89-40-117.ngrok-free.app/?talktome
 ```
 The web session will display: `Current time and date logged`.
 
