@@ -24,8 +24,8 @@ This project will teach you:
 Message brokers act as intermediaries between different services, ensuring reliable communication. They store incoming requests in a queue and serve them sequentially to receiving services. By decoupling services in this manner, you enhance scalability and performance. RabbitMQ is a message broker that implements the Advanced Message Queuing Protocol (AMQP). It facilitates communication between different components of a distributed system by sending messages between them. Celery is a distributed task queue framework that allows you to run asynchronous tasks in the background. It is often used for long-running or scheduled background tasks in web applications.
 
 ## Prerequisites
-Linux machine
-Python 3.10 or higher
+- Linux machine
+- Python 3.10 or higher
 
 ## Steps
 #### Step 1: Install RabbitMQ
@@ -34,35 +34,34 @@ Python 3.10 or higher
 
 ```sh
 sudo apt update
-Install RabbitMQ server
 ```
 
 2. Install RabbitMQ server.
 
 ```sh
 sudo apt install rabbitmq-server -y
-Start the RabbitMQ service
+
 ```
 
 3. Start the RabbitMQ service.
 
 ```sh
 sudo systemctl start rabbitmq-server
-Enable RabbitMQ service on boot
+
 ```
 
 4. Enable RabbitMQ service on boot.
 
 ```sh
 sudo systemctl enable rabbitmq-server
-Check the status of RabbitMQ
+
 ```
 
 5. Check the status of RabbitMQ
 
 ```sh
 sudo systemctl status rabbitmq-server
-Set up the RabbitMQ Management Plugin
+
 ```
 
 6. [Optional] Set up the RabbitMQ Management Plugin
@@ -88,7 +87,7 @@ pip install "celery[librabbitmq]"
 ```
 or
 
-```
+```sh
 pip install -U celery
 ```
 
@@ -132,6 +131,7 @@ server {
     }
 }
 ```
+
 6. Enable the configuration by creating a symlink to sites-enabled:
 
 ```sh
@@ -172,7 +172,7 @@ ngrok authtoken <YOUR_AUTH_TOKEN>
 ```
 
 #### Step 5: Start the Application
-1. Clone this repository and change directory to the messaging-app folder:
+1. Clone this [repository](https://github.com/laraadeboye/messaging-app) and change directory to the messaging-app folder:
 
 ```sh
 cd messaging-app
@@ -228,10 +228,10 @@ https://19e3-102-89-40-117.ngrok-free.app/
 ## App Usage
 The app interacts with RabbitMQ/Celery for email sending and logging functionality.
 
-- **For Email sending**, type the following in your web browser, replacing the [ngrok endpoint] and [Destination Email] with the exposed endpoint and valid email respectively:
+- **For Email sending**, type the following in your web browser, replacing the <ngrok endpoint> and [Destination Email] with the exposed endpoint and valid email respectively:
 
 ```sh
-https://[ngrok endpoint]/?sendmail=[Destination Email]
+https://<ngrok endpoint>/?sendmail=[Destination Email]
 ```
 
 e.g.
@@ -244,7 +244,7 @@ The web session will display: `Email to [Destination Email] queued for sending`.
 - **For message logging**, type the following in your web browser:
 
 ```sh
-https://[ngrok endpoint]/?talktome=1
+https://<ngrok endpoint>/?talktome=1
 ```
 e.g.
 
